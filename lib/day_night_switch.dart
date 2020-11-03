@@ -259,10 +259,12 @@ class _RenderSwitch extends RenderToggleable {
   HorizontalDragGestureRecognizer _drag;
 
   void _handleDragStart(DragStartDetails details) {
+    print('HDS');
     if (isInteractive) reactionController.forward();
   }
 
   void _handleDragUpdate(DragUpdateDetails details) {
+    print('HDA');
     if (isInteractive) {
       position
         ..curve = null
@@ -280,6 +282,7 @@ class _RenderSwitch extends RenderToggleable {
   }
 
   void _handleDragEnd(DragEndDetails details) {
+    print('HDEnd');
     if (position.value >= 0.5)
       positionController.forward();
     else
