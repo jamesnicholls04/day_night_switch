@@ -294,10 +294,9 @@ class _RenderSwitch extends RenderToggleable {
   void handleEvent(PointerEvent event, BoxHitTestEntry entry) {
     print('handle event: $event, entry: $entry');
     assert(debugHandleEvent(event, entry));
-    // if (event is PointerDownEvent && onChanged != null) {
-    //   _drag.addPointer(event);
-    // }
-    _drag.addPointer(event);
+    if (event is PointerDownEvent && onChanged != null) {
+      _drag.addPointer(event);
+    }
     super.handleEvent(event, entry);
   }
 
