@@ -337,7 +337,7 @@ class _RenderSwitch extends RenderToggleable {
     final bool isEnabled = onChanged != null;
     final double currentValue = position.value;
 
-    print('current value is: $currentValue');
+    //print('current value is: $currentValue');
 
     double visualPosition;
     switch (textDirection) {
