@@ -264,21 +264,21 @@ class _RenderSwitch extends RenderToggleable {
   }
 
   void _handleDragUpdate(DragUpdateDetails details) {
-    print('HDA');
-    if (isInteractive) {
-      position
-        ..curve = null
-        ..reverseCurve = null;
-      final double delta = details.primaryDelta / _trackInnerLength;
-      switch (textDirection) {
-        case TextDirection.rtl:
-          positionController.value -= delta;
-          break;
-        case TextDirection.ltr:
-          positionController.value += delta;
-          break;
-      }
-    }
+    // print('HDA');
+    // if (isInteractive) {
+    //   position
+    //     ..curve = null
+    //     ..reverseCurve = null;
+    //   final double delta = details.primaryDelta / _trackInnerLength;
+    //   switch (textDirection) {
+    //     case TextDirection.rtl:
+    //       positionController.value -= delta;
+    //       break;
+    //     case TextDirection.ltr:
+    //       positionController.value += delta;
+    //       break;
+    //   }
+    // }
   }
 
   void _handleDragEnd(DragEndDetails details) {
@@ -297,7 +297,6 @@ class _RenderSwitch extends RenderToggleable {
     if (event is PointerDownEvent && onChanged != null) {
       print('in the if thing');
       _drag.addPointer(event);
-      _handleDragEnd(null);
     }
 
     super.handleEvent(event, entry);
