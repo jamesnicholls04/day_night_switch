@@ -263,6 +263,9 @@ class _RenderSwitch extends RenderToggleable {
     if (isInteractive) reactionController.forward();
   }
 
+  // TODO: this is from James - not allowing people to slide so don't
+  // have issue had before of sliding but not changing...
+
   void _handleDragUpdate(DragUpdateDetails details) {
     // print('HDA');
     // if (isInteractive) {
